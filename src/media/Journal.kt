@@ -3,7 +3,7 @@ package media
 import Media
 import Consultable
 
-class Journal(private val titre: String, private val dateDeParution: String) :
+class Journal(titre: String, dateDeParution: String) :
     Media(titre, dateDeParution),
     Consultable
 {

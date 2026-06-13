@@ -4,7 +4,7 @@ import Media
 import Consultable
 import Empruntable
 
-class EnregistrementAudio(private val titre: String, private val dateDeParution: String, private val dureeEnSecondes: Int, private val genre: String) :
+class EnregistrementAudio(titre: String, dateDeParution: String, private val dureeEnSecondes: Int, private val genre: String) :
     Media(titre, dateDeParution),
     Consultable,
     Empruntable

@@ -4,7 +4,7 @@ import Media
 import Consultable
 import Empruntable
 
-class Dvd(private val titre: String, private val dateDeParution: String, private val dureeEnSecondes: Int, private val genre: String) :
+class Dvd(titre: String, dateDeParution: String, private val dureeEnSecondes: Int, private val genre: String) :
     Media(titre, dateDeParution),
     Consultable,
     Empruntable
