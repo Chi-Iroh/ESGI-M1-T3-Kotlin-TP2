@@ -1,3 +1,3 @@
-abstract class Media(private var titre: String, private var dateDeParution: String) {
+abstract class Media(private val titre: String, private val dateDeParution: String) {
     abstract fun afficher(): Unit
 }

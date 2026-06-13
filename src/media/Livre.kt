@@ -4,7 +4,7 @@ import Media
 import Consultable
 import Empruntable
 
-class Livre(private var auteur: String, private var editeur: String, private var titre: String, private var dateDeParution: String) :
+class Livre(private val auteur: String, private val editeur: String, private val titre: String, private val dateDeParution: String) :
     Media(titre, dateDeParution),
     Consultable,
     Empruntable
