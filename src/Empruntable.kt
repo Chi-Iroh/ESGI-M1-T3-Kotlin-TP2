@@ -1,7 +1,7 @@
 interface Empruntable {
     // On ne peut pas rendre cet attribut privé car on est dans une interface
     // On ne peut pas non plus utiliser un companion object car il serait unique pour tous les objets empruntables
-    // Donc on définit cet attribut public, pour ensuite le redéfinir en privé dans chaque classe empruntable
+    // Donc on définit cet attribut public
     var estEmprunte : Boolean
 
     fun emprunter(): Boolean  {
