@@ -7,7 +7,7 @@ BIN_JAR = $(BIN_NAME).jar
 SRC_DIR = src
 SOURCES = $(call rwildcard,$(SRC_DIR),*.kt)
 
-$(BIN_JAR):
+$(BIN_JAR): $(SOURCES)
 	kotlinc $(SOURCES) -include-runtime -d $(BIN_JAR)
 
 .PHONY: run
