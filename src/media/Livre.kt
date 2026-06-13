@@ -9,6 +9,8 @@ class Livre(private val titre: String, private val dateDeParution: String, priva
     Consultable,
     Empruntable
 {
+    override var estEmprunte: Boolean = false
+
     override fun afficher(): Unit {
         println("Livre: Titre = '${titre}', Auteur = '${auteur}', Éditeur = '${editeur}', Date de parution = '${dateDeParution}'")
     }
