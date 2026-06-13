@@ -1,11 +1,15 @@
 import media.Livre
+import media.Magazine
 
 fun main() {
-    val livre1984 = Livre("George Orwell", "Gallimard", "1984", "1972-01-01")
+    val livre = Livre("1984", "1972-01-01", "George Orwell", "Gallimard")
+    val magazine = Magazine("National Geography", "2024-10-28", "10")
 
-    livre1984.afficher()
+    livre.afficher()
+    livre.consulter()
+    livre.emprunter()
+    livre.retourner()
 
-    livre1984.consulter()
-    livre1984.emprunter()
-    livre1984.retourner()
+    magazine.afficher()
+    magazine.consulter()
 }
