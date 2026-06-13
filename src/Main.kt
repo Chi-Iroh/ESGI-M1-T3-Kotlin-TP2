@@ -46,14 +46,19 @@ fun main() {
 
     println("----------")
 
+    // On essaie de consulter un livre sans l'avoir ajouté au préalable
+
     val autreLivre = Livre("Les Fables de la Fontaine - Volume I", "1668-01-01", "Jean de la Fontaine", "Grasset")
 
+    println("On essaie de consulter le livre '${autreLivre.titre}'...")
     try {
         bibliotheque.consulter(autreLivre)
     } catch (err: IllegalStateException) {
         // Erreur, on doit d'abord ajouter l'ouvrage à la bibliothèque !
+        println("Erreur reçue: ${err.message}")
         println("On a oublié d'ajouter le livre !")
         bibliotheque.ajouterMedia(autreLivre)
+        println("Livre ajouté")
     }
     bibliotheque.consulter(autreLivre)
 }
