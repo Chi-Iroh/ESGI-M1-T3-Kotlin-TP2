@@ -14,7 +14,7 @@ class Bibliotheque {
     {
         if (media.emprunter()) {
             emprunts.add(media)
-        } else {
+        } else { // on ne peut pas emprunter une oeuvre qui n'a pas été ajouté au préalable !
             throw IllegalStateException("Le média '${media.titre}' n'est pas dans la bibliothèque, impossible de l'emprunter !")
         }
     }
@@ -25,7 +25,7 @@ class Bibliotheque {
     {
         if (media.retourner()) {
             emprunts.remove(media)
-        } else {
+        } else { // on ne peut pas rendre une oeuvre qui n'a pas été ajouté au préalable !
             throw IllegalStateException("Le média '${media.titre}' n'a pas été emprunté au préalable, impossible de le rendre !")
         }
     }
@@ -34,6 +34,7 @@ class Bibliotheque {
         where T : Media,
               T : Consultable
     {
+        // on ne peut pas consulter un oeuvre qui n'a pas été ajouté au préalable !
         if (!medias.contains(media)) {
             throw IllegalStateException("Le média '${media.titre}' n'est pas dans la bibliothèque !")
         }
